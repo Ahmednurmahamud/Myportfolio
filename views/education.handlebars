@@ -1,0 +1,40 @@
+<h2>My academic career</h2>
+
+{{#if isAdmin}} <!-- Check if the user is an admin -->
+  <div class="Add">
+    <a href="/education/new">Add New Education</a>
+  </div>
+{{/if}}
+
+<div class="Education-container">
+{{#each education}}
+<div class="education">
+    <img src="{{this.imgUrl}}" alt="{{this.name}}" class="education-image" />
+   <h3 class="education-title">{{this.name}}</h3>
+    <div class="education-details">
+    <p>Year: {{this.year}}</p>
+    <p>Description: {{this.description}}</p>
+    <p>Type: {{this.type}}</p>
+    </div>
+
+
+    {{#if ../isAdmin}} <!-- Check if the user is an admin -->
+      <!-- Add/Edit/Delete Links with distance between them -->
+      <a href="/education/update/{{this.id}}" style="margin-right: 110px;">Modify</a>
+      <a href="/education/delete/{{this.id}}">Delete</a>
+    {{/if}}
+
+  </div>
+  {{/each}}
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.education-title').on('click', function() {
+        $(this).next('.education-details').slideToggle();
+    });
+});
+</script>

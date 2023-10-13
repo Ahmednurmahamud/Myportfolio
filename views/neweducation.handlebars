@@ -1,0 +1,47 @@
+<div id="main">
+    <div>
+        <h1>New education</h1>
+        <div>
+            {{#if isLoggedIn}}
+            {{#if isAdmin}}
+            <form action="/education/new" method="post">
+                <fieldset>
+                    <label for="eduname">Project name</label>
+                    <input type="text" name="projname" id="eduname" required="required">
+                    <br />
+
+                    <label for="edutype">Project type: </label>
+                    <select name="edutype" id="edutype" required="required">
+                        <option value="Middle school">Middle school</option>
+                        <option value="High school">EducatHigh schoolion</option>
+                        <option value="University">University</option>
+                    </select>
+                    <br />
+
+                    <label for="eduyear">Project Year:</label>
+                    <input type="number" name="eduyear" id="eduyear" required="required" min="2010" max="2023">
+                    <br />
+
+                    <label for="edudesc">Education Description:</label>
+                    <textarea name="edudesc" id="edudesc" required="required"></textarea>
+                    <br />
+
+                    <label for="eduimg">Education image URL: </label>
+                    <input type="text" name="edujimg" id="eduimg" placeholder="/img/" required="required">
+                    <br />
+
+                </fieldset>
+                <input type="submit" value="Add education">
+            </form>
+            {{else}}
+            <p>Sorry, you must be an administrator to add a new education</p>
+            {{/if}}
+            {{else}}
+            <p>
+                Sorry, you must be logged in to add a new education!<br />
+                Please go to the <a href="/login">login</a> page.
+            </p>
+            {{/if}}
+        </div>
+    </div>
+</div>

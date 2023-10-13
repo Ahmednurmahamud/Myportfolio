@@ -1,0 +1,437 @@
+.introduction {
+    background-color: #888585;
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.brand {
+    border-radius: 45px;
+    width: 70px;
+    height: 70px;
+    margin-left: -1500px;
+    margin-top: 5px;
+}
+
+.contact-info {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.resume {
+    padding: 50px 10%;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.menu {
+    padding: 20px 10%;
+    text-align: center;
+    border-radius: 100px;
+    background: linear-gradient(90deg, #6d6c6c, #e9e6e6, transparent);
+    background-size: 200%;
+    animation: gradientShift 2s infinite alternate;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.page-content {
+    flex: 1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar h1 {
+    margin-right: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar li a {
+    color: rgb(103, 99, 99);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+}
+
+.image {
+    text-align: center;
+}
+
+.me {
+    text-align: center;
+}
+
+.myimage {
+    width: 200px;
+    height: auto;
+    border-radius: 45%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar h1 {
+        margin-bottom: 10px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    background: linear-gradient(to left, #cecaca, #918e8e);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.photo {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.AboutMe,
+.Education,
+.Skills,
+.Professional {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.AboutMe h5 {
+    font-size: small;
+}
+
+h3 {
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.project-image {
+    width: 200px;
+    /* or whatever size you want */
+    height: auto;
+    border: 2px solid #000;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* This ensures that if there are many projects, they'll wrap to the next line. */
+    /* This spaces the projects evenly apart. */
+}
+
+.projects {
+    flex: 1;
+    /* This will allow the project to take up equal space. */
+    margin: 110px;
+    /* You can adjust this to control the spacing between projects. */
+}
+
+.education-image {
+    width: 200px;
+    /* or whatever size you want */
+    height: auto;
+    border: 2px solid #000;
+}
+
+.Education-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* This ensures that if there are many projects, they'll wrap to the next line. */
+    /* This spaces the projects evenly apart. */
+}
+
+.education {
+    flex: 1;
+    /* This will allow the project to take up equal space. */
+    margin: 110px;
+    /* You can adjust this to control the spacing between education. */
+}
+
+.education-details {
+    display: none;
+    /* Initially hide the education details */
+}
+
+.education-title {
+    cursor: pointer;
+    /* Indicate that the title is clickable */
+    transition: color 0.3s ease;
+    /* Smooth transition for color changes on hover */
+}
+
+.education-title:hover {
+    color: #3498db;
+    /* Change color on hover to indicate interactivity */
+}
+
+.Add {
+    text-align: left;
+    /* Aligns the button to the right */
+    margin-bottom: 20px;
+    /* Background color of the button */
+    color: rgb(9, 8, 8);
+    /* Text color */
+    padding: 10px 20px;
+    /* Adds some space around the text to make it look more like a button */
+    border-radius: 5px;
+    /* Rounds the corners of the button */
+    text-decoration: none;
+    /* Removes the underline from the link */
+    transition: 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.Add :hover {
+    background-color: rgb(67, 67, 86);
+    /* Darker blue color when you hover over the button */
+}
+
+
+/* Skills */
+
+.skills-container {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-item {
+    border: 1px solid #ccc;
+    margin-top: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.skill-item h2 {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    /* smooth transition for color change */
+}
+
+.skill-item h2:hover {
+    color: #4e4a98;
+    /* or any color you prefer */
+}
+
+.skill-item p {
+    display: none;
+    margin: 10;
+}
+
+.Myskills {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-details {
+    display: none;
+    /* Initially hide the project details */
+}
+
+.project-title {
+    cursor: pointer;
+    /* Indicate that the title is clickable */
+    transition: color 0.3s ease;
+    /* Smooth transition for color changes on hover */
+}
+
+.project-title:hover {
+    color: #3498db;
+    /* Change color on hover to indicate interactivity */
+}
+
+.experience-container {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.experience-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-item {
+    border: 1px solid #ccc;
+    margin-top: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.experience-item h2 {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    /* smooth transition for color change */
+}
+
+.experience-item h2:hover {
+    color: #4e4a98;
+    /* or any color you prefer */
+}
+
+.experience-item p {
+    display: none;
+    margin: 10;
+}
+
+.MyExperience {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#main {
+    text-align: center;
+}
+
+
+/* Media Queries for Responsiveness */
+
+
+/* For Tablets */
+
+@media (max-width: 1024px) {
+    .experience-container,
+    .skills-container {
+        padding: 0 5%;
+    }
+}
+
+
+/* For Mobile Phones */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar h1 {
+        margin-bottom: 10px;
+    }
+    .experience-container,
+    .skills-container {
+        padding: 0 3%;
+        /* Slightly reduced padding for mobile screens */
+    }
+    .projects,
+    .education {
+        margin: 20px;
+        /* Reduced margin for better space utilization */
+    }
+    .skill-item,
+    .experience-item {
+        margin-top: 10px;
+        /* Reduced margin */
+    }
+    .project-image,
+    .education-image {
+        width: 150px;
+        /* Slightly reduced image size for mobile layout */
+    }
+    .myimage {
+        width: 100px;
+        /* Slightly reduced image size */
+    }
+}
+
+
+/* For Very Small Mobile Phones */
+
+@media (max-width: 480px) {
+    .skill-item,
+    .experience-item {
+        padding: 5px;
+        /* Reduced padding */
+    }
+    .project-image,
+    .education-image {
+        width: 100px;
+        /* Further reduced image size */
+    }
+    .myimage {
+        width: 70px;
+        /* Further reduced image size */
+    }
+}

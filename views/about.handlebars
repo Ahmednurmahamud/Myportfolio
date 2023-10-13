@@ -1,0 +1,46 @@
+<div class="experience-container">
+        
+    {{#if isLoggedIn}}
+    <p>Welcome, {{name}}!</p>
+    {{#if isAdmin}}
+    {{/if}}
+    {{else}}
+    <p>Please <a href="/login">login</a> to access more features.</p>
+    {{/if}}
+
+    <p>Passionate about exploring the digital realm and pushing its boundaries. <br />
+    With years of experience in web and software development, <br />
+    I've honed my skills to craft solutions that are user-friendly, efficient, and impactful. <br />
+    Down below are some of my experience during my career, please take a look.</p>
+
+    <div class="MyExperience">
+        <h1>My Work Experience</h1>
+    </div>
+
+    {{#if dbError}}
+    <p class="error">There was an error fetching the experiences: {{theError}}</p>
+    {{else}}
+    <ul class="experience-list">
+        {{#each experiences}}
+        <li class="experience-item">
+            <h2>{{this.company}}</h2>
+            <p><strong>Duration:</strong> {{this.duration}}</p>
+            <p><strong>Location:</strong> {{this.location}}</p>
+            <p><strong>Description:</strong> {{this.description}}</p>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>
+
+<!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Inline jQuery code -->
+<script>
+$(document).ready(function() {
+    $('.experience-item h2').on('click', function() {
+        $(this).siblings('p').slideToggle();
+    });
+});
+</script>

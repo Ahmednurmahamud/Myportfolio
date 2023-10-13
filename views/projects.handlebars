@@ -1,0 +1,38 @@
+<h2>Welcome, view my projects</h2>
+
+{{#if isAdmin}} <!-- Check if the user is an admin -->
+  <div class="Add">
+    <a href="/project/new">Add New Project</a>
+  </div>
+{{/if}}
+
+<div class="projects-container">
+{{#each projects}}
+  <div class="projects">
+    <img src="{{this.imgUrl}}" alt="{{this.name}}" class="project-image" />
+    <h3 class="project-title">{{this.name}}</h3>
+    <div class="project-details"> <!-- Container for project details -->
+        <p>Year: {{this.year}}</p>
+        <p>Description: {{this.description}}</p>
+        <p>Type: {{this.type}}</p>
+    </div>
+
+    {{#if ../isAdmin}} <!-- Check if the user is an admin -->
+      <!-- Add/Edit/Delete Links with distance between them -->
+      <a href="/projects/update/{{this.id}}" style="margin-right: 110px;">Modify</a>
+      <a href="/projects/delete/{{this.id}}">Delete</a>
+    {{/if}}
+
+  </div>
+{{/each}}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.project-title').on('click', function() {
+        $(this).next('.project-details').slideToggle();
+    });
+});
+</script>

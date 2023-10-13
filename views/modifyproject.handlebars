@@ -1,0 +1,42 @@
+<div id="main">
+    <div>
+        <h1>Update Project</h1>
+        <div>
+            {{#if isLoggedIn}}
+                {{#if isAdmin}}
+                    <form action="/projects/update/{{project.id}}" method="post">
+                        <fieldset>
+                            <label for="projname">Project name</label>
+                            <input type="text" name="projname" id="projname" value="{{project.name}}" required="required">
+                            <br />
+                            <label for="projyear">Project Year:</label>
+                            <input type="text" name="projyear" id="projyear" value="{{project.year}}" required="required">
+                            <br />
+                            <label for="projdesc">Project Description:</label>
+                            <textarea name="projdesc" id="projdesc" required="required">{{project.description}}</textarea>
+                            <br />
+                            <label for="projtype">Project type: </label>
+                            <select name="projtype" id="projtype" required="required">
+                                <option value="Tech" {{#if (theTypeT project.type)}} selected="selected"{{/if}}>Tech</option>
+                                <option value="Education" {{#if (theTypeE project.type)}} selected="selected"{{/if}}>Education</option>
+                                <option value="Other" {{#if (theTypeO project.type)}} selected="selected"{{/if}}>Other</option>
+                            </select>
+                            <br />
+                            <label for="projimg">Project image URL: </label>
+                            <input type="text" name="projimg" id="projimg" placeholder="/img/" value="{{project.imgUrl}}" required="required">
+                            <br />
+                        </fieldset>
+                        <input type="submit" value="Update Project">
+                    </form>
+                {{else}}
+                    <p>Sorry, you must be an administrator to modify a project</p>
+                {{/if}}
+            {{else}}
+                <p>
+                    Sorry, you must be logged in to modify a project!<br />
+                    Please go to the <a href="/login">login</a> page.
+                </p>
+            {{/if}}
+        </div>
+    </div>
+</div>

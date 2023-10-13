@@ -1,0 +1,40 @@
+<div class="skills-container">
+        
+        {{#if isLoggedIn}}
+        <p>Welcome, {{name}}!</p>
+        {{#if isAdmin}}
+        {{/if}}
+        {{else}}
+        <p>Please <a href="/login">login</a> to access more features.</p>
+        {{/if}}
+        <div class="Myskills">
+        <h1>My Skills</h1>
+        </div>
+
+        {{#if dbError}}
+        <p class="error">There was an error fetching the skills: {{theError}}</p>
+        {{else}}
+        <ul class="skills-list">
+            {{#each skills}}
+            <li class="skill-item">
+                <h2>{{this.name}}</h2>
+                <p><strong>Proficiency:</strong> {{this.proficiency}}</p>
+                <p><strong>Years of Experience:</strong> {{this.yearsOfExperience}}</p>
+                <p><strong>Description:</strong> {{this.description}}</p>
+                <p><strong>Category:</strong> {{this.category}}</p>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+    <!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Inline jQuery code -->
+<script>
+$(document).ready(function() {
+    $('.skill-item h2').on('click', function() {
+        $(this).siblings('p').slideToggle();
+    });
+});
+</script>
