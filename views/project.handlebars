@@ -1,0 +1,19 @@
+<h2>{{project.name}}</h2>
+
+<div class="project-container">
+    <div class="image-container">
+        <img src="{{project.imgUrl}}" alt="{{project.name}}" class="each-project-im" />
+    </div>
+    <div class="project-full-details">
+        <p><strong>Year:</strong> {{project.year}}</p>
+        <p><strong>Description:</strong> {{project.description}}</p>
+        <p><strong>Type:</strong> {{project.type}}</p>
+        <a href="/projects">Back to Projects</a>
+
+        {{#if isAdmin}} <!-- Check if the user is an admin -->
+            <!-- Add/Edit/Delete Links with distance between them -->
+            <a href="/projects/update/{{project.id}}" style="margin-right: 110px;">Modify</a>
+            <a href="/projects/delete/{{project.id}}">Delete</a>
+        {{/if}}
+    </div>
+</div>

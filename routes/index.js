@@ -125,6 +125,28 @@ function applyRoutes(app) {
         })
     });
 
+    app.get('/project/:id', (req, res) => {
+        db.get("SELECT * FROM projects WHERE id=? LIMIT 1", req.params.id, function(error, project) {
+            if (error) {
+                const errorModel = {
+                        errorMesage: "An error has occured"
+                    }
+                    // Render the Handlebars template with the combined data
+                res.status(500).render("404", errorModel);
+            } else if (!project) {
+                const notFound = {
+                    errorMesage: "project nor found"
+                }
+                res.status(404).render("404", notFound);
+
+
+            } else {
+                // Render the Handlebars template with the combined data
+                res.render('project', { project });
+            }
+        })
+    });
+
     // Login route
     app.get('/login', (req, res) => {
         const model = {}
