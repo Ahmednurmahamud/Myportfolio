@@ -173,7 +173,6 @@ li {
 
 .project-image {
     width: 300px;
-    /* or whatever size you want */
     height: auto;
     border: 2px solid #000;
 }
@@ -199,26 +198,20 @@ li {
     text-align: center;
     width: 100%;
     max-width: 600px;
-    /* You can adjust this value as needed */
 }
 
 .projects-container {
     display: flex;
     flex-wrap: wrap;
-    /* This ensures that if there are many projects, they'll wrap to the next line. */
-    /* This spaces the projects evenly apart. */
 }
 
 .projects {
     flex: 1;
-    /* This will allow the project to take up equal space. */
     margin: 110px;
-    /* You can adjust this to control the spacing between projects. */
 }
 
 .education-image {
     width: 200px;
-    /* or whatever size you want */
     height: auto;
     border: 2px solid #000;
 }
@@ -226,54 +219,38 @@ li {
 .Education-container {
     display: flex;
     flex-wrap: wrap;
-    /* This ensures that if there are many projects, they'll wrap to the next line. */
-    /* This spaces the projects evenly apart. */
 }
 
 .education {
     flex: 1;
-    /* This will allow the project to take up equal space. */
     margin: 110px;
-    /* You can adjust this to control the spacing between education. */
 }
 
 .education-details {
     display: none;
-    /* Initially hide the education details */
 }
 
 .education-title {
     cursor: pointer;
-    /* Indicate that the title is clickable */
     transition: color 0.3s ease;
-    /* Smooth transition for color changes on hover */
 }
 
 .education-title:hover {
     color: #3498db;
-    /* Change color on hover to indicate interactivity */
 }
 
 .Add {
     text-align: left;
-    /* Aligns the button to the right */
     margin-bottom: 20px;
-    /* Background color of the button */
     color: rgb(9, 8, 8);
-    /* Text color */
     padding: 10px 20px;
-    /* Adds some space around the text to make it look more like a button */
     border-radius: 5px;
-    /* Rounds the corners of the button */
     text-decoration: none;
-    /* Removes the underline from the link */
     transition: 0.3s;
-    /* Smooth transition for hover effect */
 }
 
 .Add :hover {
     background-color: rgb(67, 67, 86);
-    /* Darker blue color when you hover over the button */
 }
 
 
@@ -306,12 +283,10 @@ li {
 .skill-item h2 {
     cursor: pointer;
     transition: color 0.3s ease;
-    /* smooth transition for color change */
 }
 
 .skill-item h2:hover {
     color: #4e4a98;
-    /* or any color you prefer */
 }
 
 .skill-item p {
@@ -326,19 +301,15 @@ li {
 
 .project-details {
     display: none;
-    /* Initially hide the project details */
 }
 
 .project-title {
     cursor: pointer;
-    /* Indicate that the title is clickable */
     transition: color 0.3s ease;
-    /* Smooth transition for color changes on hover */
 }
 
 .project-title:hover {
     color: #3498db;
-    /* Change color on hover to indicate interactivity */
 }
 
 .experience-container {
@@ -368,12 +339,10 @@ li {
 .experience-item h2 {
     cursor: pointer;
     transition: color 0.3s ease;
-    /* smooth transition for color change */
 }
 
 .experience-item h2:hover {
     color: #4e4a98;
-    /* or any color you prefer */
 }
 
 .experience-item p {
@@ -417,26 +386,21 @@ li {
     .experience-container,
     .skills-container {
         padding: 0 3%;
-        /* Slightly reduced padding for mobile screens */
     }
     .projects,
     .education {
         margin: 20px;
-        /* Reduced margin for better space utilization */
     }
     .skill-item,
     .experience-item {
         margin-top: 10px;
-        /* Reduced margin */
     }
     .project-image,
     .education-image {
         width: 150px;
-        /* Slightly reduced image size for mobile layout */
     }
     .myimage {
         width: 100px;
-        /* Slightly reduced image size */
     }
 }
 
@@ -447,15 +411,12 @@ li {
     .skill-item,
     .experience-item {
         padding: 5px;
-        /* Reduced padding */
     }
     .project-image,
     .education-image {
         width: 100px;
-        /* Further reduced image size */
     }
     .myimage {
         width: 70px;
-        /* Further reduced image size */
     }
 }
