@@ -242,14 +242,14 @@ function applyRoutes(app) {
     });
 
     //sends the form for a new project
-    app.get('/project/new', (req, res) => {
+    app.get('/projects/new', (req, res) => {
         if (req.session.isLoggedIn == true && req.session.isAdmin == true) {
             const model = {
                 isLoggedIn: req.session.isLoggedIn,
                 name: req.session.name,
                 isAdmin: req.session.isAdmin,
             }
-            res.render('newproject', model);
+            res.render('newproject.handlebars', model);
         } else {
             res.redirect('/login');
         }
